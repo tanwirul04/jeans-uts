@@ -7,14 +7,20 @@
             <file>file:/C:/Users/acer/Documents/NetBeansProjects/jeans/src/jeans/login.java</file>
             <file>file:/C:/Users/acer/Documents/NetBeansProjects/jeans/src/jeans/config.java</file>
             <file>file:/C:/Users/acer/Documents/NetBeansProjects/jeans/src/jeans/AdminPage.java</file>
+            <file>file:/C:/Users/acer/Documents/NetBeansProjects/jeans/src/jeans/KasirPage.java</file>
             <file>file:/C:/Users/acer/Documents/NetBeansProjects/jeans/src/jeans/panels/Manageuser.java</file>
             <file>file:/C:/Users/acer/Documents/NetBeansProjects/jeans/src/jeans/Pegawai.java</file>
             <file>file:/C:/Users/acer/Documents/NetBeansProjects/jeans/src/jeans/dialog/EditUser.java</file>
+            <file>file:/C:/Users/acer/Documents/NetBeansProjects/jeans/src/jeans/panels/ManageProduk.java</file>
             <file>file:/C:/Users/acer/Documents/NetBeansProjects/jeans/src/jeans/dialog/AddNewUser.java</file>
             <file>file:/C:/Users/acer/Documents/NetBeansProjects/jeans/src/jeans/dialog/DeleteData.java</file>
-            <file>file:/C:/Users/acer/Documents/NetBeansProjects/jeans/src/jeans/panels/ManageProduk.java</file>
             <file>file:/C:/Users/acer/Documents/NetBeansProjects/jeans/src/jeans/Produk.java</file>
             <file>file:/C:/Users/acer/Documents/NetBeansProjects/jeans/src/jeans/dialog/AddNewProduk.java</file>
+            <file>file:/C:/Users/acer/Documents/NetBeansProjects/jeans/src/jeans/dialog/EditProduk.java</file>
+            <file>file:/C:/Users/acer/Documents/NetBeansProjects/jeans/src/jeans/dialog/HapusProduk.java</file>
+            <file>file:/C:/Users/acer/Documents/NetBeansProjects/jeans/src/jeans/panels/Penjualan.java</file>
+            <file>file:/C:/Users/acer/Documents/NetBeansProjects/jeans/src/jeans/panels/Transaksi.java</file>
+            <file>file:/C:/Users/acer/Documents/NetBeansProjects/jeans/src/jeans/dialog/Resi.java</file>
         </group>
     </open-files>
 </project-private>

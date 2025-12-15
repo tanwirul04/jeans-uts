@@ -188,25 +188,36 @@ public class login extends javax.swing.JFrame {
 
     private void btn_loginActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btn_loginActionPerformed
         try {
-            String sql = "SELECT * FROM user where username='"+txt_usn.getText()
-                    +"'AND password='"+txt_password.getText()+"'";
+            String sql = "SELECT * FROM user where username=? AND password=?";
             java.sql.Connection conn=config.configDB();
             java.sql.PreparedStatement pst = conn.prepareStatement(sql);
-            java.sql.ResultSet rs = pst.executeQuery(sql);
+            
+            pst.setString(1, txt_usn.getText());
+            pst.setString(2, new String(txt_password.getPassword()));
+            
+            java.sql.ResultSet rs = pst.executeQuery();
+            
             if(rs.next()){
-                if(txt_usn.getText().equals(rs.getString("username"))
-                        && txt_password.getText().equals(rs.getString("password"))){
-                        int id_user = rs.getInt("id_user");
-                        String username = rs.getString("username");
-                        JOptionPane.showMessageDialog(null, "Berhasil Login, selamat datang " + username + "!");
-                        new AdminPage(id_user, username).setVisible(true);
-                        this.dispose();
+                int id_user = rs.getInt("id_user");
+                String username = rs.getString("username");
+                String jabatan = rs.getString("jabatan");
+                
+                JOptionPane.showMessageDialog(null,
+                    "Berhasil Login sebagai " + jabatan +
+                    ", selamat datang " + username + "!");
+                
+                if ("ADMIN".equalsIgnoreCase(jabatan)) {
+                    new AdminPage(id_user, username).setVisible(true);
+                } else if ("KARYAWAN".equalsIgnoreCase(jabatan)) {
+                    new KasirPage(id_user, username).setVisible(true);
                 }
-            } else  {
-                JOptionPane.showMessageDialog(null, "username atau password salah");
+
+                this.dispose();
+            } else {
+                JOptionPane.showMessageDialog(null, "Username atau password salah");
             }
         } catch (Exception e){
-            JOptionPane.showConfirmDialog(this, e.getMessage());
+            JOptionPane.showMessageDialog(this, e.getMessage());
         }
     }//GEN-LAST:event_btn_loginActionPerformed
 
